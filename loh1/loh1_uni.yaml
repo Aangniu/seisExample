@@ -1,0 +1,40 @@
+!Any
+components:
+  - !GroupFilter
+    groups: 1
+    components: !ConstantMap
+      map:
+        rho:    2700.0
+        mu0:    3.23980992e10
+        lambda0: 3.24038016e10
+        gammaR:  2.4e10
+        xi0:     1.00
+        mu:     3.23980992e10
+        lambda: 3.24038016e10
+        gamma:  0.0
+        epsxx_alpha: -0.00
+        epsyy_alpha: -0.00
+        epszz_alpha: -0.0
+        epsxy_alpha: 0.0
+        epsyz_alpha: 0.0
+        epszx_alpha: 0.0
+        Cd:     2.4e-14
+  - !GroupFilter
+    groups: 2
+    components: !ConstantMap
+      map:
+        rho:    2700.0
+        mu0:    3.23980992e10
+        lambda0: 3.24038016e10
+        gammaR:  2.4e10
+        xi0:     1.00
+        mu:     3.23980992e10
+        lambda: 3.24038016e10
+        gamma:  0.0
+        epsxx_alpha: -0.00
+        epsyy_alpha: -0.00
+        epszz_alpha: -0.0
+        epsxy_alpha: 0.0
+        epsyz_alpha: 0.0
+        epszx_alpha: 0.0
+        Cd:     2.4e-14
