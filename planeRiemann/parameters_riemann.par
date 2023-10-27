@@ -1,0 +1,73 @@
+&equations
+!yaml file defining spatial dependance of material properties
+MaterialFileName = 'riemann_mat.yaml'
+UseCellHomogenizedMaterial = 0
+/
+
+&IniCondition
+cICType = 'PlanarRiemann' !Planarwave
+origin = 0 0 0.0
+kVec = 12.567e1 0 0
+ampField = 0.0 1.0 0 0 0 0 0 0 0
+/
+
+&Boundaries
+BC_pe = 1
+/
+
+&SourceType
+/
+
+
+&SpongeLayer
+/
+
+&MeshNml
+MeshFile = 'cubeP_0p1_x100_irr'              ! Name of mesh file
+meshgenerator = 'Netcdf'        ! Name of meshgenerator (format)
+/
+
+&Discretization
+! Order = 4                            ! Order of accuracy in space and times
+! Material = 1                         ! Material order
+CFL = 0.1                            ! CFL number (<=1.0)
+FixTimeStep = 5                      ! Manualy chosen minimum time
+ClusteredLTS = 1                               ! 1 for Global time stepping, 2,3,5,... Local time stepping (advised value 2)
+!ClusteredLTS defines the multi-rate for the time steps of the clusters 2 for Local time stepping
+/
+
+&Output
+OutputFile = 'output_riemann/conv_cubeS_s0p1_x100_O6_CFL0p01' !calib_results_nonlinear1 calib_results_deStrain_free_c1
+iOutputMask = 1 1 1 1 1 1 1 1 1      ! Variables ouptut
+iOutputMaskMaterial = 1 1 1          ! Material output
+Format = 6                           ! Format (0=IDL, 1=TECPLOT, 2=IBM DX, 4=GiD)
+! Interval = 200                       ! Index of printed info at timesteps
+TimeInterval = 5.                   ! Index of printed info at time
+refinement = 1
+
+! Free surface output
+SurfaceOutput = 1
+SurfaceOutputRefinement = 1
+SurfaceOutputInterval = 10e-5
+! 10e-5
+printIntervalCriterion = 2           ! Criterion for index of printed info: 1=timesteps,2=time,3=timesteps+time
+
+pickdt = 10e-5                        ! Pickpoint Sampling
+pickDtType = 1                       ! Pickpoint Type
+nRecordPoints = 2                   ! number of Record points which are read from file
+RFileName = 'recordPoints100_shfited.dat'       ! Record Points in extra file
+
+xdmfWriterBackend = 'posix' ! (optional) The backend used in fault, wavefield,
+! and free-surface output. The HDF5 backend is only supported when SeisSol is compiled with
+! HDF5 support.
+/
+
+&AbortCriteria
+EndTime = 5e-3
+/
+
+&Analysis
+/
+
+&Debugging
+/

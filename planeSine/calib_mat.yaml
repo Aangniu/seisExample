@@ -1,0 +1,14 @@
+!ConstantMap
+map:
+  rho:    7850.0
+  mu:     8.27e10
+  lambda: 9.71e10
+  sigmaxx_alpha: 0.0
+  sigmaxy_alpha: 0.0
+  sigmaxz_alpha: 0.0
+  sigmayx_alpha: 0.0
+  sigmayy_alpha: 0.0
+  sigmayz_alpha: 0.0
+  sigmazx_alpha: 0.0
+  sigmazy_alpha: 0.0
+  sigmazz_alpha: 0.0
