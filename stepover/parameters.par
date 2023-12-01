@@ -1,6 +1,7 @@
 &equations
 !yaml file defining spatial dependance of material properties
-MaterialFileName = 'stepover_material.yaml'
+! MaterialFileName = 'stepover_damageMaterial.yaml'
+MaterialFileName = 'dam_heteMat.yaml'
 /
 
 &IniCondition
@@ -16,7 +17,7 @@ BC_of = 1                                      ! enable absorbing boundaries
 FL = 16                                         ! Friction law
 !0: none, 16:LSW, 103: RS with strong velocity weakening
 !yaml file defining spatial dependance of fault properties
-ModelFileName = 'fault.yaml'
+ModelFileName = 'faultSS.yaml'
 
 
 !reference vector for defining strike and dip direction
@@ -63,13 +64,13 @@ meshgenerator = 'PUML'                         ! Name of meshgenerator (Gambit3D
 &Discretization
 CFL = 0.5                                      ! CFL number (<=1.0)
 FixTimeStep = 5                                ! Manualy chosen minimum time
-ClusteredLTS = 2                               ! 1 for Global time stepping, 2,3,5,... Local time stepping (advised value 2)
+ClusteredLTS = 1                               ! 1 for Global time stepping, 2,3,5,... Local time stepping (advised value 2)
 !ClusteredLTS defines the multi-rate for the time steps of the clusters 2 for Local time stepping
 /
 
 &Output
 FaultOutputFlag = 1                            ! DR output (add this line only if DR is active)
-OutputFile = 'output/stepover'
+OutputFile = 'output/stepover_cd2em6het_stop72_SS_30s'
 Format = 10                                    ! Format (10= no output, 6=hdf5 output)
 !             |stress     |vel
 iOutputMask = 0 0 0 0 0 0 1 1 1
@@ -99,7 +100,7 @@ EnergyOutputInterval = 0.5
 /
 
 &AbortCriteria
-EndTime = 5.0
+EndTime = 30.0
 /
 
 &Analysis

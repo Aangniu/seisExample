@@ -1,0 +1,17 @@
+!ConstantMap
+map:
+  rho:    2700
+  mu0:     32400000000
+  lambda0: 32400000000
+  gammaR:  2.00e10
+  xi0:     0.99
+  mu:     32400000000
+  lambda: 32400000000
+  gamma:  0.00e10
+  epsxx_alpha: 0.0e-4
+  epsyy_alpha: 0.0e-3
+  epszz_alpha: 0.0e-4
+  epsxy_alpha: 0.0e-3
+  epsyz_alpha: 0.0
+  epszx_alpha: 0.0
+  Cd:     2.0e-6
