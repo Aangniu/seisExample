@@ -4,21 +4,21 @@
     rho:    2700
     mu0:     32400000000
     lambda0: 32400000000 
-    xi0:     0.99
+    xi0:     0.3
     mu:     32400000000
     lambda: 32400000000
     gamma:  0.00e10
-    epsxx_alpha: 0.0e-4
-    epsyy_alpha: 0.0e-3
-    epszz_alpha: 0.0e-4
-    epsxy_alpha: 0.0e-3
+    epsxx_alpha: 4.63e-4
+    epsyy_alpha: -1.850e-3
+    epszz_alpha: 4.63e-4
+    epsxy_alpha: 1.11e-3
     epsyz_alpha: 0.0
     epszx_alpha: 0.0
-    Cd:     2.0e-6
+    Cd:    0.2e-5
 [gammaR]: !FunctionMap
   map:
     gammaR: |
       if (z>=-1000){
-        return 1000000000.0;
+        return 100000000.0;
       }
       return 20000000000.0;

@@ -2,7 +2,7 @@
 [s_xx,s_yy,s_zz,s_yz,s_xz,nuc_xx,nuc_yy,nuc_zz,nuc_yz,nuc_xz, nuc_xy]: !ConstantMap
   map:
     s_xx: 0
-    s_yy: -150e6
+    s_yy: -0e6
     s_zz: 0
     s_yz: 0
     s_xz: 0
@@ -19,12 +19,12 @@
       rz = sqrt((z+7500)*(z+7500));
       r = max(rx, rz);
       if (r <= 1500.0) {
-         return 102000000;
+         return 30000000;
       }
-      return 72000000;
+      return 0.0;
     mu_d: |
       if (z >= -1000.0) {
-         return 0.800;
+         return 0.373;
       }
       return 0.373;
 [mu_s, d_c, cohesion, forced_rupture_time]: !ConstantMap
