@@ -24,7 +24,7 @@
       return 0.0;
     mu_d: |
       if (z >= -1000.0) {
-         return 0.373;
+         return 0.70;
       }
       return 0.373;
 [mu_s, d_c, cohesion, forced_rupture_time]: !ConstantMap
