@@ -1,6 +1,6 @@
 !ConstantMap
 map:
-  rho:    7850.0
+  rho:    2473.0
   mu:     8.27e10
   lambda: 9.71e10
   sigmaxx_alpha: 0.0
