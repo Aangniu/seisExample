@@ -48,3 +48,8 @@
         return r/(0.7*Vs)+(0.081*r_crit/(0.7*Vs))*(1.0/(1.0-pow(r/r_crit, 2.0))-1.0);
       }
       return 1000000000.0;
+[Tnuc_n, Tnuc_s, Tnuc_d]: ConstantMap
+  map:
+    Tnuc_n: 0
+    Tnuc_s: 0
+    Tnuc_d: 0
