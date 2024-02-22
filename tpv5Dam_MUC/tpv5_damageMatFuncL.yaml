@@ -24,14 +24,14 @@
       rx2 = sqrt((x-7500)*(x-7500));
       r = max(rx, rz);
       if (r <= 1800.0) {
-         return 0.00005;
+         return 0.000005;
       }
       if (max(rx1,rz) <=1800) {
-         return 0.00005;
+         return 0.000005;
       }
       if (max(rx2,rz) <=1800) {
-         return 0.00005;
+         return 0.000005;
       }
-      return 0.00005;
+      return 0.000005;
 
 
